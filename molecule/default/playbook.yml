@@ -3,4 +3,4 @@
   hosts: all
   become: true
   roles:
-    - role: yanehi.ansible-role-template
+    - role: yanehi.template
