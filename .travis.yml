@@ -1,0 +1,21 @@
+---
+language: python
+services: docker
+env:
+  global:
+    - ROLE_NAME: ansible-role-template
+  matrix:
+    - MOLECULE_DISTRO: centos7
+install:
+  # Install test dependencies.
+  - pip3 install molecule===2.22 yamllint ansible-lint docker
+before_script:
+  # Use actual Ansible Galaxy role name for the project directory.
+  - cd ../
+  - mv ansible-role-$ROLE_NAME yanehi.$ROLE_NAME
+  - cd yanehi.$ROLE_NAME
+script:
+  # Run tests.
+  - molecule test
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

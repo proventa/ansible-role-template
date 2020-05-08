@@ -1,0 +1,15 @@
+---
+- name: Add the postgres user 'postgres'
+  user:
+    name: "{{ pg_user }}"
+    password: "{{ pg_user_password }}"
+    shell: /bin/bash
+    append: yes
+    
+- name: Create PostgreSQL data directory
+  file:
+    path: "{{ pg_data_dir }}"
+    owner: "{{ pg_user }}"
+    group: "{{ pg_group }}"
+    mode: 0700
+    state: directory

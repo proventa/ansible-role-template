@@ -1,0 +1,6 @@
+---
+- name: install required packages
+  yum:
+    name: "{{ os_python_packages }}"
+    state: present
+  notify: start firewalld

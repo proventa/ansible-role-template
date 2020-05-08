@@ -1,0 +1,8 @@
+[controller]
+control ansible_connection=local
+
+[dbservers]
+pg0 ansible_user=root
+
+[etcd-cluster]
+etcd0 ansible_user=root

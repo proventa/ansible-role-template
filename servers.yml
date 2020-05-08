@@ -1,0 +1,10 @@
+---
+- hosts: postgres-patroni
+  roles:
+    - ansible-role-postgresql
+    - ansible-role-patroni
+
+- hosts: etcd-cluster
+  roles:
+    - ansible-role-etcd
+    
