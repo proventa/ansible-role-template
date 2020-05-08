@@ -3,7 +3,7 @@ language: python
 services: docker
 env:
   global:
-    - ROLE_NAME: ansible-role-template
+    - ROLE_NAME: template
   matrix:
     - MOLECULE_DISTRO: centos7
 install:
