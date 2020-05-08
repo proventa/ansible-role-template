@@ -5,7 +5,6 @@
     password: "{{ pg_user_password }}"
     shell: /bin/bash
     append: yes
-    
 - name: Create PostgreSQL data directory
   file:
     path: "{{ pg_data_dir }}"

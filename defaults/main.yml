@@ -10,5 +10,5 @@ pg_data_dir: "/var/lib/pgsql/{{ pg_major_version }}/data"
 
 # Required OS and python packages
 os_python_packages:
-    - net-tools   
+    - net-tools
     - firewalld
