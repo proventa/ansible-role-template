@@ -88,3 +88,14 @@ vagrant up
 
 * execute your ansible playbook
   * `ansible-playbook <path to folder with role>/site.yml`
+
+## Local linter
+
+* before pushing to travis-ci run `yamllint` and `ansible-lint` locally over your ansible role
+* requirements:
+  * currently working only with linux
+  * yamllint and ansible-lint are installed
+
+```bash
+./local_role_linter.sh <path to local ansible role repository>
+```
