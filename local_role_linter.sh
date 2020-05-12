@@ -56,7 +56,7 @@ if [ $python_installed = "installed" ]; then
 
             # check if molecule directory exists
             if [ -d $directory ]; then
-                yamllint $directory/molecule/*.$yml_ending
+                yamllint $directory/molecule/default/*.$yml_ending
             else
                 echo "No molecule directory!"
             fi
